@@ -37,10 +37,10 @@ module vsevenseg_tb(
 		.seg_L(seg_L)
 	);
 
-    	seg2digit uut2(
-        	.seg_L(seg_L),
-        	.digit(digit)
-   	 );
+    // 	seg2digit uut2(
+    //     	.seg_L(seg_L),
+    //     	.digit(digit)
+   	//  );
 
 	initial begin
 		// Initialize Inputs

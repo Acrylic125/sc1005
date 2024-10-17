@@ -8,7 +8,7 @@ def decodeToSegments(x_):
         True if (x_[2] == 1) else False, 
         True if (x_[3] == 1) else False
     ]
-    print(f"{x_} {x}")
+    # print(f"{x_} {x}")
     seg = [
         False, False, False, False, False, False, False
     ]
@@ -57,13 +57,18 @@ def display_segment(segments):
         f" {h(d)} ",
     ]
 
+def p(seg): return "0" if seg else "1"
+
 for i in range(16):
     x3, x2, x1, x0 = (i >> 3) & 1, (i >> 2) & 1, (i >> 1) & 1, i & 1
     # segments = decodeToSegments([x3, x2, x1, x0])
     segments = decodeToSegments([x0, x1, x2, x3])
     display = display_segment(segments)
+    a,b,c,d,e,f,g = segments
+
+    print(f"4'b{x3}{x2}{x1}{x0}: seg_L = 7'b{p(g)}{p(f)}{p(e)}_{p(d)}{p(c)}{p(b)}{p(a)}; // '{i}'")
     
-    print(f"--- {i} ({x3}{x2}{x1}{x0}) ---")
-    for line in display:
-        print(line)
-    print()
+    # print(f"--- {i} ({x3}{x2}{x1}{x0}) ---")
+    # for line in display:
+    #     print(line)
+    # print()
