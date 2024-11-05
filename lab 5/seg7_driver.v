@@ -85,7 +85,7 @@ module seg7_driver(
             4'd8  : seg_L = 7'b000_0000;
             4'd9  : seg_L = 7'b001_0000;
             // 4'd10 : seg_L = 7'b000_1000; // For space _
-            4'd11 : seg_L = 7'b110_0010; // For lowercase o
+            4'd11 : seg_L = 7'b010_0011; // For lowercase o
             4'd12 : seg_L = 7'b100_0110;
             4'd13 : seg_L = 7'b010_0001;
             4'd14 : seg_L = 7'b000_0110;
